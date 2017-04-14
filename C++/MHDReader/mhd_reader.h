@@ -26,6 +26,11 @@ public:
     unsigned char * GetImData() const {
         return _dataType.empty()? nullptr:_imData;
     }
+
+    size_t GetImWidth() { return _dimX;}
+    size_t GetImHeight() { return _dimY;}
+    size_t GetImSlice() { return _dimZ;}
+
 private:
     std::string _fileName;
     std::size_t _dimX, _dimY, _dimZ;
